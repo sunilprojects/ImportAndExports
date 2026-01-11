@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
+// import ProductsPreviewSection from './components/ProductsPreviewSection';
+// import WhyChooseSection from './components/WhyChooseSection';
+// import QualityComplianceSection from './components/QualityComplianceSection';
+import MarketsServeSection from './components/MarketsServeSection';
 import AboutSection from './components/AboutSection';
 import ProductsSection from './components/ProductsSection';
 import ProductDetailPage from './components/ProductDetailPage';
 import RequestQuotePage from './components/RequestQuotePage';
 import BenefitsSection from './components/BenefitsSection';
-import TestimonialsSection from './components/TestimonialsSection';
+// import TestimonialsSection from './components/NewsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import WhyChooseSection from './components/WhyChooseSection';
+import NewsSection from './components/NewsSection';
 
 const App = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -50,6 +56,8 @@ const App = () => {
     window.scrollTo(0, 0);
   };
 
+ 
+
   // Show Request Quote page
   if (showQuotePage) {
     return (
@@ -86,10 +94,15 @@ const App = () => {
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       <Navbar />
       <HeroSection />
-      <ProductsSection onProductClick={handleProductClick} />
-       <AboutSection />
-      <BenefitsSection />
-      <TestimonialsSection />
+       <ProductsSection onProductClick={handleProductClick} />
+      {/* <ProductsPreviewSection onProductClick={handleProductClick} /> */}
+      
+      <MarketsServeSection />
+      <AboutSection />
+     <WhyChooseSection/>
+      {/* <BenefitsSection /> */}
+      <NewsSection />
+      {/* <MoringaNewsSection/> */}
       <ContactSection />
       <Footer />
       <WhatsAppButton />

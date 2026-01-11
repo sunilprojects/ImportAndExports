@@ -1,44 +1,28 @@
 import React from 'react';
-import { Target, Eye, Globe, Award, Users, TrendingUp, Shield, CheckCircle, Package, Briefcase } from 'lucide-react';
+import { Target, Eye, CheckCircle, Award, Shield, Package } from 'lucide-react';
 
 const AboutSection = () => {
-  const companyStats = [
-    { icon: <Globe className="w-8 h-8" />, value: '25+', label: 'Countries Served', color: 'blue' },
-    { icon: <Package className="w-8 h-8" />, value: '50+', label: 'Product Range', color: 'green' },
-    { icon: <Users className="w-8 h-8" />, value: '200+', label: 'Global Clients', color: 'purple' },
-    { icon: <TrendingUp className="w-8 h-8" />, value: '15+', label: 'Years Experience', color: 'orange' }
+  const qualityPoints = [
+    'Controlled sourcing from trusted growers',
+    'Processing in certified facilities',
+    'Systematic batch-level quality checks',
+    'Complete traceability from farm to port',
+    'Compliance with international food safety standards'
   ];
 
-  const coreValues = [
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: 'Quality Assurance',
-      description: 'International standards compliance with rigorous testing at every stage'
-    },
-    {
-      icon: <CheckCircle className="w-6 h-6" />,
-      title: 'Ethical Sourcing',
-      description: 'Transparent supply chain with trusted producers and processing units'
-    },
-    {
-      icon: <Award className="w-6 h-6" />,
-      title: 'Export Excellence',
-      description: 'Complete documentation and reliable shipping for global markets'
-    },
-    {
-      icon: <Briefcase className="w-6 h-6" />,
-      title: 'Business Partnership',
-      description: 'Long-term relationships built on trust and consistent quality'
-    }
+  const products = [
+    'Moringa Leaf Powder',
+    'Onion Powder',
+    'Tomato Powder',
+    'Spinach Powder',
+    'Carrot Powder',
+    'Beetroot Powder'
   ];
 
-  const certifications = [
-    'FSSAI Certified',
-    'ISO 22000:2018',
-    'HACCP Compliant',
-    'Organic Certified',
-    'Export License',
-    'GMP Certified'
+  const services = [
+    { icon: <Package className="w-6 h-6" />, text: 'Bulk Orders' },
+    { icon: <Shield className="w-6 h-6" />, text: 'Custom Specifications' },
+    { icon: <Award className="w-6 h-6" />, text: 'Private Labeling' }
   ];
 
   return (
@@ -46,42 +30,101 @@ const AboutSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-3">
-            About <span className="text-blue-600">Us</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            About <span className="text-blue-600">Skylerc International Pvt Ltd</span>
           </h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto mb-4"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Your Trusted Partner for Premium Food Ingredients from India
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Your trusted partner for premium dried and dehydrated food ingredients
           </p>
         </div>
 
-        {/* Company Overview */}
-        <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-lg p-8 md:p-12 mb-12 border border-blue-100">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Who We Are</h3>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Skylerc International Private Limited is an <strong>India-based export company</strong> engaged in sourcing, 
-                processing, and exporting dried and dehydrated food ingredients to international markets.
+        {/* Company Background */}
+        <div className="mb-16">
+          <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl p-8 md:p-12 border border-blue-100">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+              <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                <Shield className="w-6 h-6 text-white" />
+              </div>
+              Company Background
+            </h3>
+            <div className="space-y-4 text-gray-700 leading-relaxed text-lg">
+              <p>
+                <strong>Skylerc International Private Limited</strong> is an India-based export company 
+                focused on delivering high-quality dried and dehydrated food ingredients to global markets.
               </p>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Our core focus is on <strong>moringa powder and vegetable powders</strong> that meet 
-                international quality, safety, and compliance requirements. We serve B2B clients including 
-                food manufacturers, distributors, and importers worldwide.
+              <p>
+                We specialize in <strong>moringa powder and selected vegetable powders</strong> manufactured 
+                to meet international food safety, quality, and compliance standards. Our products are supplied 
+                to food manufacturers, distributors, private-label brands, and importers across multiple countries.
               </p>
-              <p className="text-gray-700 leading-relaxed">
-                We work closely with trusted producers and processing units to ensure 
-                <strong> product purity, consistency, and traceability</strong> from farm to port.
+              <p>
+                By working directly with trusted growers and professionally managed processing units, we ensure 
+                <strong> strict quality control, consistent specifications, and complete traceability from farm to port</strong>—enabling 
+                our buyers to source with confidence.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              {companyStats.map((stat, index) => (
-                <div key={index} className="bg-white rounded-lg p-6 text-center shadow-md border border-gray-100">
-                  <div className={`text-${stat.color}-600 flex justify-center mb-3`}>
-                    {stat.icon}
+          </div>
+        </div>
+
+        {/* What We Export */}
+        <div className="mb-16">
+          <div className="grid lg:grid-cols-2 gap-8 items-start">
+            {/* Left - Text Content */}
+            <div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-6">What We Export</h3>
+              <p className="text-gray-700 leading-relaxed text-lg mb-6">
+                We export premium <strong>moringa leaf powder</strong> and <strong>dehydrated vegetable powders</strong> including 
+                onion, tomato, spinach, carrot, and beetroot. Our products are hygienically processed, quality tested, 
+                and supplied in bulk to meet international food safety and export standards.
+              </p>
+              <p className="text-gray-700 leading-relaxed text-lg mb-6">
+                We support <strong>bulk orders, custom specifications, and private labeling</strong>, serving food manufacturers, 
+                distributors, and importers worldwide.
+              </p>
+
+              {/* Services */}
+              <div className="flex flex-wrap gap-4 mb-6">
+                {services.map((service, index) => (
+                  <div key={index} className="flex items-center gap-2 bg-white border-2 border-blue-200 rounded-xl px-4 py-3">
+                    <div className="text-blue-600">{service.icon}</div>
+                    <span className="font-semibold text-gray-800">{service.text}</span>
                   </div>
-                  <div className={`text-3xl font-bold text-${stat.color}-600 mb-1`}>{stat.value}</div>
-                  <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right - Product List */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-100">
+              <h4 className="text-xl font-bold text-gray-900 mb-6">Our Export Products</h4>
+              <div className="space-y-3">
+                {products.map((product, index) => (
+                  <div key={index} className="flex items-center gap-3 p-3 bg-gradient-to-r from-green-50 to-blue-50 rounded-lg">
+                    <div className="bg-green-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0">
+                      <CheckCircle className="w-5 h-5" />
+                    </div>
+                    <span className="font-semibold text-gray-800">{product}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* How We Ensure Quality */}
+        <div className="mb-16">
+          <div className="bg-gradient-to-r from-green-600 to-blue-600 rounded-2xl p-8 md:p-12 text-white">
+            <h3 className="text-3xl font-bold mb-6 text-center">How We Ensure Quality</h3>
+            <p className="text-lg text-center mb-8 opacity-90 max-w-4xl mx-auto">
+              We ensure quality through controlled sourcing, processing in certified facilities, and systematic 
+              batch-level checks, ensuring all products comply with applicable food safety, quality, and export standards.
+            </p>
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+              {qualityPoints.map((point, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all">
+                  <div className="bg-white text-green-600 w-10 h-10 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <CheckCircle className="w-6 h-6" />
+                  </div>
+                  <p className="text-sm font-medium">{point}</p>
                 </div>
               ))}
             </div>
@@ -89,130 +132,55 @@ const AboutSection = () => {
         </div>
 
         {/* Vision & Mission */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-8">
           {/* Vision */}
-          <div className="bg-white border-2 border-blue-600 rounded-lg p-8">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="bg-blue-600 p-3 rounded-lg">
-                <Eye className="w-6 h-6 text-white" />
+          <div className="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-blue-600">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="bg-blue-100 p-4 rounded-xl">
+                <Eye className="w-8 h-8 text-blue-600" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900">Our Vision</h3>
             </div>
-            <p className="text-gray-700 leading-relaxed text-lg">
-              To become a <strong>trusted global exporter</strong> of high-quality food ingredients from India, 
-              recognized for excellence in quality, reliability, and customer service.
+            <p className="text-gray-700 text-lg leading-relaxed">
+              To be a <strong>trusted global supplier</strong> of high-quality dried and dehydrated food ingredients, 
+              recognized for consistency, compliance, and long-term partnerships.
             </p>
           </div>
 
           {/* Mission */}
-          <div className="bg-white border-2 border-green-600 rounded-lg p-8">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="bg-green-600 p-3 rounded-lg">
-                <Target className="w-6 h-6 text-white" />
+          <div className="bg-white rounded-2xl shadow-xl p-8 border-t-4 border-green-600">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="bg-green-100 p-4 rounded-xl">
+                <Target className="w-8 h-8 text-green-600" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900">Our Mission</h3>
             </div>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-2 text-gray-700">
-                <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                <span>Deliver export-quality products that meet international standards</span>
-              </li>
-              <li className="flex items-start gap-2 text-gray-700">
-                <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                <span>Build long-term relationships with global buyers</span>
-              </li>
-              <li className="flex items-start gap-2 text-gray-700">
-                <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                <span>Ensure ethical sourcing and transparent trade practices</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Core Values */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Our Core Values</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {coreValues.map((value, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                <div className="bg-blue-100 text-blue-600 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                  {value.icon}
-                </div>
-                <h4 className="font-bold text-gray-900 mb-2">{value.title}</h4>
-                <p className="text-sm text-gray-600 leading-relaxed">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Certifications & Compliance */}
-        <div className="bg-gray-50 rounded-lg p-8 mb-12 border">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-3">Certifications & Compliance</h3>
-            <p className="text-gray-600">Our commitment to quality is backed by international certifications</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-            {certifications.map((cert, index) => (
-              <div key={index} className="bg-white rounded-lg p-4 text-center border border-gray-200 hover:border-blue-600 transition-colors">
-                <Award className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                <p className="text-xs font-semibold text-gray-900">{cert}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Why Choose Us */}
-        <div className="bg-gradient-to-r from-blue-600 to-green-600 rounded-lg p-8 md:p-12 text-white">
-          <h3 className="text-3xl font-bold mb-8 text-center">Why Choose Sky High Pvt Ltd?</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Package className="w-8 h-8" />
-              </div>
-              <h4 className="font-bold text-lg mb-2">Quality Products</h4>
-              <p className="text-sm text-white/90">
-                Consistently high-quality products meeting international food safety standards
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-8 h-8" />
-              </div>
-              <h4 className="font-bold text-lg mb-2">Global Reach</h4>
-              <p className="text-sm text-white/90">
-                Experienced in exporting to 25+ countries with reliable shipping and documentation
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Briefcase className="w-8 h-8" />
-              </div>
-              <h4 className="font-bold text-lg mb-2">Business Partnership</h4>
-              <p className="text-sm text-white/90">
-                Long-term relationships built on trust, transparency, and consistent delivery
-              </p>
-            </div>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              To source and export food ingredients that meet <strong>international quality and safety standards</strong> through 
+              reliable supply chains, responsible sourcing, and disciplined quality control, delivering dependable value 
+              to our global B2B customers.
+            </p>
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="mt-12 text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Partner With Us?</h3>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Contact our export team today for product samples, pricing, and detailed specifications
+        <div className="mt-16 text-center bg-gray-50 rounded-2xl p-10 border-2 border-gray-200">
+          <h3 className="text-3xl font-bold text-gray-900 mb-4">Ready to Source With Confidence?</h3>
+          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            Partner with us for consistent quality, reliable supply, and professional export service
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button 
               onClick={() => window.location.href = '#contact'}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all hover:shadow-xl"
             >
-              Request Quote
+              Request a Quote
             </button>
             <button 
               onClick={() => window.location.href = '#products'}
-              className="bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-bold text-lg transition-all"
             >
-              View Products
+              View Our Products
             </button>
           </div>
         </div>

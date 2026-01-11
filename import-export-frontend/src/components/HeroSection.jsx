@@ -4,7 +4,7 @@ import image2 from '../images/onion.jpg';
 import image3 from '../images/tomato.jpg';
 import image4 from '../images/beetroot.jpg';
 import image5 from '../images/caroot.png';
-import { ChevronRight, ChevronLeft } from 'lucide-react';
+import { ChevronRight, ChevronLeft, Check, Globe, Package, Award, Truck } from 'lucide-react';
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -31,6 +31,13 @@ const HeroSection = () => {
      url: image5,
       alt: "premium caroot powder"
     }
+  ];
+ // Trust badges data
+  const trustBadges = [
+    { icon: <Award className="w-5 h-5" />, text: "Export Quality" },
+    { icon: <Package className="w-5 h-5" />, text: "Bulk Supply" },
+    { icon: <Check className="w-5 h-5" />, text: "Private Label Available" },
+    { icon: <Truck className="w-5 h-5" />, text: "Worldwide Shipping" }
   ];
 
   // Auto-slide effect - changes image every 4 seconds
@@ -65,11 +72,43 @@ const HeroSection = () => {
                 Global Exports
               </span>
             </h2>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-          Skylerc International Pvt Ltd, a professional exporter of moringa powder and dehydrated vegetable powders, delivering consistent quality through controlled sourcing, hygienic processing, and export-compliant packaging for international buyers.
+            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              We specialize in exporting premium quality products worldwide. 
+              Our commitment to excellence and customer satisfaction has made us 
+              a trusted name in international trade. From farm-fresh produce to 
+              processed goods, we deliver quality that speaks for itself.
             </p>
 
-            <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all flex items-center gap-2">
+            {/* Markets We Serve */}
+            <div className="flex items-center gap-2 mb-6 text-gray-700">
+              <Globe className="w-5 h-5 text-blue-600 flex-shrink-0" />
+              <p className="text-base font-medium">
+                Serving buyers in <span className="font-bold text-gray-900">UAE, UK, Europe & Middle East</span>
+              </p>
+            </div>
+
+            {/* Trust Badges */}
+            <div className="grid grid-cols-2 gap-4 mb-8">
+              {trustBadges.map((badge, index) => (
+                <div 
+                  key={index}
+                  className="flex items-center gap-3 bg-white rounded-lg px-4 py-3 shadow-md border border-gray-100 hover:border-green-300 transition-colors"
+                >
+                  <div className="text-green-600">
+                    {badge.icon}
+                  </div>
+                  <span className="text-sm font-semibold text-gray-800">
+                    {badge.text}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA Button */}
+            <button 
+              onClick={() => window.location.href = '#products'}
+              className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all flex items-center gap-2"
+            >
               Explore Our Products
               <ChevronRight className="w-5 h-5" />
             </button>

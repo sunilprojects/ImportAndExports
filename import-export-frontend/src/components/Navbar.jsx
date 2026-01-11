@@ -11,32 +11,32 @@ const Navbar = () => {
       name: 'Home', 
       href: '#home' 
     },
-    { 
-      name: 'Services', 
-      href: '#services',
-      dropdown: [
-        { name: 'Import Services', href: '#import' },
-        { name: 'Export Services', href: '#export' },
-        { name: 'Customs Clearance', href: '#customs' },
-        { name: 'Warehousing', href: '#warehouse' }
-      ]
-    },
+    // { 
+    //   name: 'Services', 
+    //   href: '#services',
+    //   dropdown: [
+    //     { name: 'Import Services', href: '#import' },
+    //     { name: 'Export Services', href: '#export' },
+    //     { name: 'Customs Clearance', href: '#customs' },
+    //     { name: 'Warehousing', href: '#warehouse' }
+    //   ]
+    // },
     { 
       name: 'About Us', 
       href: '#about',
-      dropdown: [
-        { name: 'Company Profile', href: '#profile' },
-        { name: 'Our Team', href: '#team' },
-        { name: 'Why Choose Us', href: '#why-us' }
-      ]
+      // dropdown: [
+      //   { name: 'Company Profile', href: '#profile' },
+      //   { name: 'Our Team', href: '#team' },
+      //   { name: 'Why Choose Us', href: '#why-us' }
+      // ]
     },
     { 
       name: 'Products', 
       href: '#products' 
     },
     { 
-      name: 'Testimonials', 
-      href: '#testimonials' 
+      name: 'Insights', 
+      href: '#insights' 
     },
     { 
       name: 'Contact', 
@@ -76,7 +76,7 @@ const Navbar = () => {
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
+          <nav className="hidden lg:flex items-center space-x-1 ">
             {navLinks.map((link, index) => (
               <div
                 key={link.name}
@@ -90,7 +90,7 @@ const Navbar = () => {
                 >
                   {link.name}
                   {link.dropdown && (
-                    <ChevronDown className="w-4 h-4 ml-1 transition-transform group-hover:rotate-180" />
+                    <ChevronDown className="w-4 h-4 ml-1 transition-transform group-hover:rotate-180 "  />
                   )}
                 </a>
 
@@ -115,7 +115,7 @@ const Navbar = () => {
           {/* Contact Icons - Desktop */}
           <div className="hidden lg:flex items-center space-x-3">
             <a 
-              href="tel:+919983487" 
+              href="tel:+919845620961" 
               className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-red-600 transition-colors border border-gray-300 rounded-md hover:border-red-600"
             >
               <Phone className="w-4 h-4" />
@@ -126,7 +126,7 @@ const Navbar = () => {
               className="flex items-center gap-2 px-4 py-2 bg-red-600 text-white hover:bg-red-700 transition-colors rounded-md"
             >
               <Mail className="w-4 h-4" />
-              <span className="text-sm font-medium">Contact Us</span>
+              <span className="text-sm font-medium">info@skylercinternational.com</span>
             </a>
           </div>
 
