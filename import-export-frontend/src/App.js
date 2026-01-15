@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
-// import ProductsPreviewSection from './components/ProductsPreviewSection';
-// import WhyChooseSection from './components/WhyChooseSection';
+import ProductsPreviewSection from './components/ProductsPreviewSection';
+import WhyChooseSection from './components/WhyChooseSection';
 // import QualityComplianceSection from './components/QualityComplianceSection';
 import MarketsServeSection from './components/MarketsServeSection';
 import AboutSection from './components/AboutSection';
 import ProductsSection from './components/ProductsSection';
 import ProductDetailPage from './components/ProductDetailPage';
 import RequestQuotePage from './components/RequestQuotePage';
-import BenefitsSection from './components/BenefitsSection';
-// import TestimonialsSection from './components/NewsSection';
+// import BenefitsSection from './components/BenefitsSection';
+// import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
-import WhyChooseSection from './components/WhyChooseSection';
 import NewsSection from './components/NewsSection';
 
 const App = () => {
@@ -56,13 +55,26 @@ const App = () => {
     window.scrollTo(0, 0);
   };
 
- 
+  const handleNavigation = (href) => {
+    // Reset all states to go back to main page
+    setShowProductDetail(false);
+    setShowQuotePage(false);
+    setSelectedProduct(null);
+    
+    // Scroll to the section after a brief delay
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
 
   // Show Request Quote page
   if (showQuotePage) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
-        <Navbar />
+        <Navbar onNavigate={handleNavigation} />
         <RequestQuotePage 
           product={selectedProduct}
           onBack={handleBackFromQuote}
@@ -77,7 +89,7 @@ const App = () => {
   if (showProductDetail && selectedProduct) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
-        <Navbar />
+        <Navbar onNavigate={handleNavigation} />
         <ProductDetailPage 
           product={selectedProduct} 
           onBack={handleBackToProducts}
@@ -94,15 +106,16 @@ const App = () => {
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-50">
       <Navbar />
       <HeroSection />
-       <ProductsSection onProductClick={handleProductClick} />
       {/* <ProductsPreviewSection onProductClick={handleProductClick} /> */}
-      
+      <ProductsSection onProductClick={handleProductClick} />
+      <WhyChooseSection />
+      {/* <QualityComplianceSection /> */}
       <MarketsServeSection />
       <AboutSection />
-     <WhyChooseSection/>
+      
       {/* <BenefitsSection /> */}
-      <NewsSection />
-      {/* <MoringaNewsSection/> */}
+      {/* <TestimonialsSection /> */}
+       <NewsSection/>
       <ContactSection />
       <Footer />
       <WhatsAppButton />

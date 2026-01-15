@@ -50,7 +50,7 @@ const ProductsSection = ({ onProductClick }) => {
       title: 'Onion Powder',
       image: onionImg,
       shortDesc: 'Natural beetroot powder with vibrant color',
-      fullDescription: 'Our Beetroot Powder is made from high-quality beets, carefully dried and ground to preserve nutrients and color. Rich in nitrates, fiber, and essential minerals. Perfect for natural food coloring, beverages, and health products.',
+      fullDescription: 'Onion Powder is manufactured from premium-quality onions that are cleaned, dehydrated, and finely ground under hygienic conditions. It offers consistent flavor, aroma, and shelf stability, making it ideal for large-scale food processing and seasoning applications.',
       benefits: ['Natural red-purple color', 'High in antioxidants', 'Rich in iron and folate', 'Organic certified available'],
       specifications: {
         meshSize: '80-100',
@@ -59,7 +59,7 @@ const ProductsSection = ({ onProductClick }) => {
         packaging: 'Multi-layer food-grade bags',
         origin: 'India'
       },
-      applications: ['Natural Colorant', 'Health Drinks', 'Sports Nutrition', 'Bakery Products'],
+      applications: ['Food processing & manufacturing', 'Sauces, soups, and gravies', 'Ready-to-eat and instant foods', 'Bakery Products'],
       certifications: ['FSSAI', 'Organic Certified', 'ISO 22000']
     },
     {
