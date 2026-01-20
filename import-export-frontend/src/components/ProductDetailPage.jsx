@@ -11,7 +11,8 @@ const ProductDetailPage = ({ product, onBack, onRequestQuote }) => {
     fullTitle: product.fullTitle || product.title,
     badges: product.badges || ['Export Quality', '100% Natural', 'Hygienically Processed'],
     fullDescription: product.fullDescription || 'Premium quality product suitable for international markets.',
-    applications: product.applications || [
+    applications: product.applications 
+    || [
       'Health & wellness products',
       'Nutraceuticals and supplements',
       'Functional foods and beverages',
@@ -20,7 +21,7 @@ const ProductDetailPage = ({ product, onBack, onRequestQuote }) => {
     packagingOptions: product.packagingOptions || [
       'Bulk export packaging (as per buyer requirement)',
       'Customized packaging available on request',
-      'Food-grade multi-layer bags',
+      // 'Food-grade multi-layer bags',
       'Private labeling available'
     ],
     moq: product.specifications?.moq || 'As per requirement'

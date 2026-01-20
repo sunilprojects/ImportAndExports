@@ -41,7 +41,7 @@ const WhyChooseSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Why Choose <span className="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">Sky High Pvt Ltd</span>
+            Why Choose <span className="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">Skylerc International</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Your trusted export partner delivering quality, reliability, and excellence in every shipment
