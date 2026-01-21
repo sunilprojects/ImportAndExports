@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
-import ProductsPreviewSection from './components/ProductsPreviewSection';
+// import ProductsPreviewSection from './components/ProductsPreviewSection';
 import WhyChooseSection from './components/WhyChooseSection';
 // import QualityComplianceSection from './components/QualityComplianceSection';
 import MarketsServeSection from './components/MarketsServeSection';

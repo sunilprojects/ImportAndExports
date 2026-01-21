@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import logo1 from '../images/ss7.png';
-import { Menu, X, Phone, Mail, ChevronDown } from 'lucide-react';
+import { Menu, X, Phone, Mail } from 'lucide-react';
 
 const Navbar = ({ onNavigate }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null);
+  const [, setActiveDropdown] = useState(null);
 
   const navLinks = [
     { name: 'Home', href: '#home' },

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, Eye, CheckCircle, Award, Shield, Package, Globe, Users, TrendingUp } from 'lucide-react';
+import { Target, Eye, CheckCircle, Award, Shield, Package, Globe } from 'lucide-react';
 
 const AboutSection = () => {
   const qualityPoints = [
@@ -24,12 +24,12 @@ const AboutSection = () => {
     { icon: <Award className="w-6 h-6" />, text: 'Private Labeling', color: 'purple' }
   ];
 
-  const stats = [
-    { icon: <Globe className="w-8 h-8" />, number: '25+', label: 'Countries Served', color: 'blue' },
-    { icon: <Users className="w-8 h-8" />, number: '200+', label: 'Global Clients', color: 'green' },
-    { icon: <TrendingUp className="w-8 h-8" />, number: '15+', label: 'Years Experience', color: 'purple' },
-    { icon: <Package className="w-8 h-8" />, number: '50+', label: 'Export Products', color: 'orange' }
-  ];
+  // const stats = [
+  //   { icon: <Globe className="w-8 h-8" />, number: '25+', label: 'Countries Served', color: 'blue' },
+  //   { icon: <Users className="w-8 h-8" />, number: '200+', label: 'Global Clients', color: 'green' },
+  //   { icon: <TrendingUp className="w-8 h-8" />, number: '15+', label: 'Years Experience', color: 'purple' },
+  //   { icon: <Package className="w-8 h-8" />, number: '50+', label: 'Export Products', color: 'orange' }
+  // ];
 
   return (
     <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">
